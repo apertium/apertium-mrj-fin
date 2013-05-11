@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+  <!-- mrj → fin --> 
+
+  <mode name="mrj-fin" install="yes">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.mrj-fin.t1x"/>
+        <file name="mrj-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t2x"/>
+        <file name="mrj-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t3x"/>
+        <file name="mrj-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="mrj-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-debug" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.mrj-fin.t1x"/>
+        <file name="mrj-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t2x"/>
+        <file name="mrj-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t3x"/>
+        <file name="mrj-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="mrj-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+ 
+  
+  <mode name="mrj-fin-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="mrj-fin-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -t">
+        <file name="mrj-fin.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="mrj-fin-transfer" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="mrj-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.mrj-fin.t1x"/>
+        <file name="mrj-fin.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="mrj-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.mrj-fin.t1x"/>
+        <file name="mrj-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t2x"/>
+        <file name="mrj-fin.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="mrj-fin-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="mrj-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="mrj-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="mrj-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="mrj-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="mrj-fin.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.mrj-fin.t1x"/>
+        <file name="mrj-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t2x"/>
+        <file name="mrj-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.mrj-fin.t3x"/>
+        <file name="mrj-fin.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <!-- fin → mrj -->
+
+  <mode name="fin-mrj" install="yes">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.fin-mrj.t1x"/>
+        <file name="fin-mrj.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t2x"/>
+        <file name="fin-mrj.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t3x"/>
+        <file name="fin-mrj.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="fin-mrj.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-debug" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.fin-mrj.t1x"/>
+        <file name="fin-mrj.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t2x"/>
+        <file name="fin-mrj.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t3x"/>
+        <file name="fin-mrj.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="fin-mrj.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+  
+  <mode name="fin-mrj-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="fin-mrj-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="fin-mrj.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-transfer" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.fin-mrj.t1x"/>
+        <file name="fin-mrj.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.fin-mrj.t1x"/>
+        <file name="fin-mrj.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t2x"/>
+        <file name="fin-mrj.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-mrj-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-mrj.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-mrj.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-mrj.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-mrj.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-mrj-fin.fin-mrj.t1x"/>
+        <file name="fin-mrj.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t2x"/>
+        <file name="fin-mrj.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-mrj-fin.fin-mrj.t3x"/>
+        <file name="fin-mrj.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+
+
+</modes>
+
+

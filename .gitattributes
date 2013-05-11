@@ -1,0 +1,27 @@
+* text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-mrj-fin.fin-mrj.lrx -text
+/apertium-mrj-fin.fin-mrj.rlx -text
+/apertium-mrj-fin.fin-mrj.t1x -text
+/apertium-mrj-fin.fin-mrj.t2x -text
+/apertium-mrj-fin.fin-mrj.t3x -text
+/apertium-mrj-fin.fin.lexc -text
+/apertium-mrj-fin.fin.twol -text
+/apertium-mrj-fin.mrj-fin.dix -text
+/apertium-mrj-fin.mrj-fin.lrx -text
+/apertium-mrj-fin.mrj-fin.rlx -text
+/apertium-mrj-fin.mrj-fin.t1x -text
+/apertium-mrj-fin.mrj-fin.t2x -text
+/apertium-mrj-fin.mrj-fin.t3x -text
+/apertium-mrj-fin.mrj.lexc -text
+/apertium-mrj-fin.mrj.twol -text
+/autogen.sh -text
+/configure.ac -text
+/fin-mrj.prob -text svneol=unset#unset
+/modes.xml -text
+/mrj-fin.prob -text svneol=unset#unset
