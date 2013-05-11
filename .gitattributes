@@ -25,3 +25,4 @@
 /fin-mrj.prob -text svneol=unset#unset
 /modes.xml -text
 /mrj-fin.prob -text svneol=unset#unset
+texts/vixen.mrj.txt -text svneol=unset#application/octet-stream
