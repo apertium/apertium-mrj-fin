@@ -7,10 +7,78 @@ LEXICON Root
 
 Nouns ; 
 
-LEXICON N1
+LEXICON N_E-KONS
 
-%<n%>: # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<acc%>:ӹм # ;
+
+LEXICON N_E-VOW
+
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<acc%>:м # ;
+
+LEXICON N_E-Y
+%<n%>%<sg%>%<nom%>:ӹ # ;
+%<n%>%<sg%>%<gen%>:ӹн # ;
+%<n%>%<sg%>%<acc%>:ӹм # ;
+
+LEXICON N_T-KONS
+
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<acc%>:ым # ;
+%<n%>%<sg%>%<lat%>:еш # ;
+
+LEXICON N_T-VOW
+
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<acc%>:м # ;
+
+LEXICON N_T-Y
+%<n%>%<sg%>%<nom%>:ы # ;
+%<n%>%<sg%>%<gen%>:ын # ;
+%<n%>%<sg%>%<acc%>:ым # ;
+
 
 LEXICON Nouns
 
-пи N1 ; ! ""
+пи N_E-VOW ; ! ""
+ваштар N_T-KONS ;
+игӹ:иг N_E-Y ; 
+кечӹ:кеч N_E-Y ;
+кӧргӓш N_E-KONS ;
+лаксак N_T-KONS ;
+пӹжӓш N_E-KONS ;
+рок N_T-KONS ;
+соты N_T-Y ;
+ӹрвӹж N_E-KONS ;
+
+LEXICON Adjectives
+
+аяран
+кӓнгӹж
+кӹжгӹ
+
+LEXICON Adverbs
+
+тӹшӓкен
+
+LEXICON Numerals
+
+нӹл
+
+LEXICON Postpositio
+
+лӹвӓлӓн
+
+LEXICON Pronouns
+
+тӹдӹн
+ӹшлӓнжӹ
+
+LEXICON Verbs
+
+мон
+капаен
+шачын
+ӹштен
+
