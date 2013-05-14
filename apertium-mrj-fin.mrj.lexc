@@ -2,83 +2,119 @@
 Multichar_Symbols
 
 %<n%>   ! Имя существительное · Noun
+{Ы}
 
 LEXICON Root
-
+Adjectives ;
+Adverbs ;
 Nouns ; 
+Numerals ;
+Postpositions ;
+Pronouns ;
+Verbs ;
 
-LEXICON N_E-KONS
-
-%<n%>%<sg%>%<nom%>: # ;
-%<n%>%<sg%>%<acc%>:ӹм # ;
-
-LEXICON N_E-VOW
-
-%<n%>%<sg%>%<nom%>: # ;
-%<n%>%<sg%>%<acc%>:м # ;
-
-LEXICON N_E-Y
-%<n%>%<sg%>%<nom%>:ӹ # ;
-%<n%>%<sg%>%<gen%>:ӹн # ;
-%<n%>%<sg%>%<acc%>:ӹм # ;
-
-LEXICON N_T-KONS
+LEXICON N_КОЛ
 
 %<n%>%<sg%>%<nom%>: # ;
-%<n%>%<sg%>%<acc%>:ым # ;
-%<n%>%<sg%>%<lat%>:еш # ;
+%<n%>%<sg%>%<acc%>:Ым # ;
 
-LEXICON N_T-VOW
+!LEXICON N_E-VOW
+!
+!%<n%>%<sg%>%<nom%>: # ;
+!%<n%>%<sg%>%<acc%>:м # ;
+!
+!LEXICON N_E-Y
+!%<n%>%<sg%>%<nom%>:ӹ # ;
+!%<n%>%<sg%>%<gen%>:ӹн # ;
+!%<n%>%<sg%>%<acc%>:ӹм # ;
+!
+!LEXICON N_T-KONS
+!
+!%<n%>%<sg%>%<nom%>: # ;
+!%<n%>%<sg%>%<acc%>:ым # ;
+!%<n%>%<sg%>%<lat%>:еш # ;
+!
+!LEXICON N_T-VOW
+!
+!%<n%>%<sg%>%<nom%>: # ;
+!%<n%>%<sg%>%<acc%>:м # ;
 
-%<n%>%<sg%>%<nom%>: # ;
-%<n%>%<sg%>%<acc%>:м # ;
-
-LEXICON N_T-Y
-%<n%>%<sg%>%<nom%>:ы # ;
-%<n%>%<sg%>%<gen%>:ын # ;
-%<n%>%<sg%>%<acc%>:ым # ;
+LEXICON N_ТӸРВӸ
+%<n%>%<sg%>%<nom%>:Ы # ;
+%<n%>%<sg%>%<gen%>:Ын # ;
+%<n%>%<sg%>%<acc%>:Ым # ;
 
 
 LEXICON Nouns
 
-пи N_E-VOW ; ! ""
-ваштар N_T-KONS ;
-игӹ:иг N_E-Y ; 
-кечӹ:кеч N_E-Y ;
-кӧргӓш N_E-KONS ;
-лаксак N_T-KONS ;
-пӹжӓш N_E-KONS ;
-рок N_T-KONS ;
-соты N_T-Y ;
-ӹрвӹж N_E-KONS ;
+пи:пи N_ТӸРВӸ ; ! ""
+ваштар:ваштар N_КОЛ ; 
+игӹ:игӹ N_ТӸРВӸ ; 
+кечӹ:кечӹ N_ТӸРВӸ ;
+кӧргӓш:кӧргӓш N_КОЛ ;
+кӹч:кӹч N_КОЛ ; ! kolmas lause кӹчӹштӹ PxPl3
+лаксак:лаксак N_КОЛ ;
+мычаш:мычаш N_КОЛ ; ! kolmas lause мычашышты PxPl3
+нер:нер N_КОЛ ; ! kolmas lause
+пач:пач N_T-KONS ; ! kolmas lause пачышты PxPl3
+пӹжӓш:пӹжӓш N_КОЛ ;
+пӹлӹш:пӹлӹш N_КОЛ ; ! kolmas lause пӹлӹшӹштӹ PxPl3
+рок:рок N_КОЛ ;
+соты:соты N_ТӸРВӸ ;
+тӹрвӹ:тӹрвӹ N_ТӸРВӸ ; ! kolmas lause тӹрвӹштӹ PxPl3
+ял:ял N_КОЛ ; ! kolmas lause ялышты PxPl3
+ӹрвӹж:ӹрвӹж N_КОЛ ;
+
+LEXICON A_КОЛ
+%<a%>: # ;
+
+LEXICON A_ТӸРВӸ
+%<a%>:ӹ # ;
+
+LEXICON A_ОЛМА
+%<a%>: # ;
+%<a%>%<sg%>: # ;
+%<a%>%<pl%>:влӓ # ;
 
 LEXICON Adjectives
 
-аяран
-кӓнгӹж
-кӹжгӹ
+аяран:аяран A_КОЛ ;
+вӹцкӹж:вӹцкӹж A_КОЛ ; ! kolmas lause
+изи:изи A_ОЛМА ; ! kolmas lause
+кашаргы:кашаргы A_ТӸРВӸ ; ! kolmas lause
+кӹжгӹ:кӹжгӹ A_ТӸРВӸ ; 
+ошы:ошы A_ТӸРВӸ ; ! kolmas lause
+сары:сары A_ТӸРВӸ ; ! kolmas lause
+шимӹ:шимӹ A_ТӸРВӸ ; ! kolmas lause
+яжо:яжо A_ОЛМА ; ! kolmas lause яжовлӓ Pl
+
+LEXICON ADV
+%<adv%>: # ;
 
 LEXICON Adverbs
 
-тӹшӓкен
+техень:техень # ;
+тӹшӓкен:тӹшӓкен # ;
 
 LEXICON Numerals
 
 нӹл
 
-LEXICON Postpositio
+LEXICON Postpositions
 
-лӹвӓлӓн
+лӹвӓлӓн:лӹвӓлӓн PO
 
 LEXICON Pronouns
 
-тӹдӹн
-ӹшлӓнжӹ
+нӹнӹ ! kolmas lause
+нӹнӹн ! kolmas lause
+тӹдӹн ! toka lause
+ӹшлӓнжӹ ! eka lause
 
 LEXICON Verbs
 
-мон
-капаен
-шачын
-ӹштен
+моаш:мо V_АМ ; ! мон
+капаяш:капай V_EM ; ! капаен 
+шачаш:шач V_AM ; ! шачын
+ӹштӓш:ӹшт V_EM ; ! ӹштен
 
