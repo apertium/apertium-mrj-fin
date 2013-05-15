@@ -6,7 +6,11 @@
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
+    <e><p><l>жава<s n="n"/></l><r>sammakko<s n="n"/></r></p></e>
     <e><p><l>пи<s n="n"/></l><r>koira<s n="n"/></r></p></e>
+    <e><p><l>коти<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
+    <e><p><l>кӹси<s n="n"/></l><r>kissa<s n="n"/></r></p></e>
+    <e><p><l>мӧскӓ<s n="n"/></l><r>karhu<s n="n"/></r></p></e>
 
   </section>
 </dictionary>
