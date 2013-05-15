@@ -25,7 +25,7 @@ Multichar_Symbols
 !! (It is highly suggested to follow existing standards when adding new tags).
 
 !! The parts-of-speech are:
- %<n%> %<a%> %<adj%> %<v%>
+ %<n%> %<a%> %<adv%> %<v%>
  %<pron%> %<cs%> %<cc%> %<po%> %<interj%> %<pcle%> %<num%> %<descr%>
 
 !! The parts of speech are further split up into:
@@ -17968,7 +17968,7 @@ LEXICON verbs
 айырлалташ:айырлалт V_АМ  ;
 айырлаш:айырл V_ЕМ  ;
 айыртемӓлтӓш:айыртемӓлт V_АМ  ;
-ак:ак VAux  ;
+ак:ак VNegAux  ;
 аккомпанируяш:аккомпанируй V_ЕМ  ;
 активизируяш:активизируй V_ЕМ  ;
 акшаклалаш:акшаклал V_АМ  ;
@@ -17983,12 +17983,12 @@ LEXICON verbs
 алталалташ:алталалт V_АМ  ;
 алталаш:алтал V_ЕМ  ;
 алталылаш:алталыл V_АМ  ;
-ам:ам VAux  ;
+ам:ам VNegAux  ;
 амалаш:амал V_ЕМ  ;
 амалташ:амалт V_ЕМ  ;
 амалташ:амалт V_ЕМ  ;
 амбылцаш:амбылц V_ЕМ  ;
-ана:ана VAux  ;
+ана:ана VNegAux  ;
 анализируяш:анализируй V_ЕМ  ;
 анаш:ан V_ЕМ  ;
 анаш:хан V_ЕМ  ;
@@ -18020,7 +18020,7 @@ LEXICON verbs
 аршынлаш:аршынл V_ЕМ  ;
 аслаш:асл V_ЕМ  ;
 асфальтируяш:асфальтируй V_ЕМ  ;
-ат:ат VAux  ;
+ат:ат VNegAux  ;
 атакуяш:атакуй V_ЕМ  ;
 аттестуяш:аттестуй V_ЕМ  ;
 аханицӓлӓнӓш:аханицӓлӓн V_ЕМ  ;
@@ -21378,17 +21378,17 @@ LEXICON verbs
 LEXICON A_  !!= * @CODE@ 
 %<a%>: # ;
 %<a%>%<comp%>:%>рак # ;
-%<a%>%<der_n%>: N_ОЛМА ; !! This should be neutral 2013-05-11
+%<a%>%<der_n%>: NMN_ОЛМА ; !! This should be neutral 2013-05-11
 
 LEXICON A_ОЛМА !!= * @CODE@
 %<a%>: # ;
 %<a%>%<comp%>:%>рак # ;
-%<a%>%<der_n%>: N_ОЛМА ;
+%<a%>%<der_n%>: NMN_ОЛМА ;
 
 LEXICON A_ТӸРВӸ  !!= * @CODE@
 %<a%>: # ;
 %<a%>%<comp%>:%>рак # ;
-%<a%>%<der_n%>: N_ТӸРВӸ ;
+%<a%>%<der_n%>: NMN_ТӸРВӸ ;
 
 
 
@@ -21422,8 +21422,8 @@ LEXICON Ad-A_ !!= * @CODE@
 %<ada%>: # ;
 
 LEXICON ADV_ ! 
-%<adj%>: K ;
-%<adj%>%<comp%>:%>рак # ;
+%<adv%>: K ;
+%<adv%>%<comp%>:%>рак # ;
 
 LEXICON ADV_КОЛ ! 
  ADV_ ;
@@ -21432,7 +21432,7 @@ LEXICON ADV_ОЛМА !
  ADV_ ;
 
 LEXICON DESCR_
-%<adj%>%<descr%>: K ;
+%<adv%>%<descr%>: K ;
 
 LEXICON SPAT_
 %<spat%>: K ;
@@ -21441,7 +21441,7 @@ LEXICON SPAT_
 !!Temporal tags with cases
 
 LEXICON TEMP_  !!= * @CODE@ 
-%<adj%>%<temp%>: K ;
+%<adv%>%<temp%>: K ;
 
 
 
@@ -21517,26 +21517,31 @@ LEXICON N_ТӸРВӸ_SUB !!= * @CODE@
 !! !!Standard
 
 LEXICON N_КОЛ !!= @CODE@ кол:кол
-%<n%>: NMN_OBLIQUE-INDEFINITE ;
-%<n%>: NMN_OBLIQUE-POSSESSA ;
-%<n%>%<sg%>%<nom%>: 	  K	; 
+%<n%>: NMN_КОЛ ;
+LEXICON NMN_КОЛ
+ NMN_OBLIQUE-INDEFINITE ;
+ NMN_OBLIQUE-POSSESSA ;
+%<sg%>%<nom%>: 	  K	; 
 
 LEXICON N_ТӸРВӸ !!= * @CODE@ тӹрвӹ:тӹрвӹ
 !! The stem vowel "е" is found with possessor indices and the lative
-%<n%>: NMN_OBLIQUE-INDEFINITE ;
-%<n%>: NMN_OBLIQUE-POSSESSA ;
-%<n%>%<sg%>%<nom%>: 	  K	; 
-%<n%>%<sg%>%<lat%>:%>Е2ш 	  K	; 
-!%<n%>%<pxsg1%>%<sg%>%<nom%>:%>Е2м K ;
-!%<n%>%<pxsg1%>%<pl%>%<nom%>:%>Е2мвлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
-!%<n%>%<pxsg2%>%<sg%>%<nom%>:%>Е2т K ;
-!%<n%>%<pxsg2%>%<pl%>%<nom%>:Е2твлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
-%<n%>%<sg%>%<lat%>%<pxsg1%>:%>Е2шем	   K  ;
-%<n%>%<sg%>%<lat%>%<pxsg3%>:%>Е2шЫ1жЫ1	   K  ;
-!%<n%>%<pxsg1%>:%>Е2м SG-ABEACCCOMDATGEN ;
-%<n%>%<pxsg1%>:эм PL-ABEACCCOMDATGENILLINELATNOM ;
+%<n%>: NMN_ТӸРВӸ ;
+
+LEXICON NMN_ТӸРВӸ
+ NMN_OBLIQUE-INDEFINITE ;
+ NMN_OBLIQUE-POSSESSA ;
+%<sg%>%<nom%>: 	  K	; 
+%<sg%>%<lat%>:%>Е2ш 	  K	; 
+!%<pxsg1%>%<sg%>%<nom%>:%>Е2м K ;
+!%<pxsg1%>%<pl%>%<nom%>:%>Е2мвлӓ K ;
+%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
+!%<pxsg2%>%<sg%>%<nom%>:%>Е2т K ;
+!%<pxsg2%>%<pl%>%<nom%>:Е2твлӓ K ;
+%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
+%<sg%>%<lat%>%<pxsg1%>:%>Е2шем	   K  ;
+%<sg%>%<lat%>%<pxsg3%>:%>Е2шЫ1жЫ1	   K  ;
+!%<pxsg1%>:%>Е2м SG-ABEACCCOMDATGEN ;
+%<pxsg1%>:эм PL-ABEACCCOMDATGENILLINELATNOM ;
  
 LEXICON SG-ABEACCCOMDATGEN
 %<sg%>%<abe%>:де K ;
@@ -21560,39 +21565,48 @@ LEXICON PL-ABEACCCOMDATGENILLINELATNOM
 %<pl%>%<nom%>:%>влӓ K ;
 
 LEXICON N_ПОЧТА !!= @CODE@  почта:почта
-%<n%>: NMN_OBLIQUE-INDEFINITE ;
-%<n%>: NMN_OBLIQUE-POSSESSA ;
-%<n%>%<sg%>%<nom%>: 	  K	; 
+%<n%>: NMN_ПОЧТА ;
+
+LEXICON NMN_ПОЧТА
+ NMN_OBLIQUE-INDEFINITE ;
+ NMN_OBLIQUE-POSSESSA ;
+%<sg%>%<nom%>: 	  K	; 
 
 LEXICON N_ОЛМА !!= @CODE@  олма:олма
-%<n%>: NMN_OBLIQUE-INDEFINITE ;
-%<n%>: NMN_OBLIQUE-POSSESSA ;
-%<n%>%<sg%>%<nom%>: 	  K	; 
-%<n%>%<pxsg1%>%<sg%>%<nom%>:эм K ;
-%<n%>%<pxsg1%>%<pl%>%<nom%>:эмвлӓ K ;
-%<n%>%<pxsg1%>%<pl%>%<nom%>:мвлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
-%<n%>%<pxsg2%>%<sg%>%<nom%>:эт K ;
-%<n%>%<pxsg2%>%<pl%>%<nom%>:этвлӓ K ;
-%<n%>%<pxsg2%>%<pl%>%<nom%>:твлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
-%<n%>%<sg%>%<lat%>%<pxsg3%>:%>эшЫ1жЫ1	   K  ;
+%<n%>: NMN_ОЛМА ;
+
+LEXICON NMN_ОЛМА
+ NMN_OBLIQUE-INDEFINITE ;
+ NMN_OBLIQUE-POSSESSA ;
+%<sg%>%<nom%>: 	  K	; 
+%<pxsg1%>%<sg%>%<nom%>:эм K ;
+%<pxsg1%>%<pl%>%<nom%>:эмвлӓ K ;
+%<pxsg1%>%<pl%>%<nom%>:мвлӓ K ;
+%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
+%<pxsg2%>%<sg%>%<nom%>:эт K ;
+%<pxsg2%>%<pl%>%<nom%>:этвлӓ K ;
+%<pxsg2%>%<pl%>%<nom%>:твлӓ K ;
+%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
+%<sg%>%<lat%>%<pxsg3%>:%>эшЫ1жЫ1	   K  ;
 
 LEXICON N_ӒВӒ !!= @CODE@  ӓвӓ:ӓвӓ
-%<n%>: NMN_OBLIQUE-INDEFINITE ;
-%<n%>:%^KIN NMN_OBLIQUE-POSSESSA ;
-%<n%>%<sg%>%<nom%>: 	  K	; 
-%<n%>%<pxsg1%>%<sg%>%<nom%>:эм K ;
-%<n%>%<pxsg1%>%<sg%>%<nom%>:м K ; !! Special
-%<n%>%<pxsg1%>%<pl%>%<nom%>:эмвлӓ K ;
-%<n%>%<pxsg1%>%<pl%>%<nom%>:мвлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
-%<n%>%<pxsg2%>%<sg%>%<nom%>:эт K ;
-%<n%>%<pxsg2%>%<sg%>%<nom%>:т K ; !! Special
-%<n%>%<pxsg2%>%<pl%>%<nom%>:этвлӓ K ;
-%<n%>%<pxsg2%>%<pl%>%<nom%>:твлӓ K ;
-%<n%>%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
-%<n%>%<sg%>%<lat%>%<pxsg3%>:%>эшЫ1жЫ1	   K  ;
+%<n%>: NMN_ӒВӒ ;
+
+LEXICON NMN_ӒВӒ
+ NMN_OBLIQUE-INDEFINITE ;
+:%^KIN NMN_OBLIQUE-POSSESSA ;
+%<sg%>%<nom%>: 	  K	; 
+%<pxsg1%>%<sg%>%<nom%>:эм K ;
+%<pxsg1%>%<sg%>%<nom%>:м K ; !! Special
+%<pxsg1%>%<pl%>%<nom%>:эмвлӓ K ;
+%<pxsg1%>%<pl%>%<nom%>:мвлӓ K ;
+%<pl%>%<nom%>%<pxsg1%>:влӓэм K ;
+%<pxsg2%>%<sg%>%<nom%>:эт K ;
+%<pxsg2%>%<sg%>%<nom%>:т K ; !! Special
+%<pxsg2%>%<pl%>%<nom%>:этвлӓ K ;
+%<pxsg2%>%<pl%>%<nom%>:твлӓ K ;
+%<pl%>%<nom%>%<pxsg2%>:влӓэт K ;
+%<sg%>%<lat%>%<pxsg3%>:%>эшЫ1жЫ1	   K  ;
 
 LEXICON NMN_OBLIQUE-INDEFINITE
 %<sg%>%<gen%>:%>Ы1н K ; ! 
@@ -22121,6 +22135,9 @@ LEXICON NUM_
 LEXICON VAux !!= * @CODE* = auxiliaries first
 
 %<v%>%<aux%>: # ;
+LEXICON VNegAux
+%<v%>%<neg%>%<aux%>: # ;
+
 
 LEXICON V_АМ !!= @CODE@ ӹштӓш:ӹшт
 %<v%>: INDPRSSG1-am ;
@@ -22162,9 +22179,9 @@ LEXICON V_АМ !!= @CODE@ ӹштӓш:ӹшт
 
 %<v%>: INF ;
 %<v%>%<prcact%>:%>шЫ2 K  ; !! Contlex needed
-%<v%>%<prcact%>%<der_ышы%>:%>шЫ2 N_ТӸРВӸ ;
-%<v%>%<prcpss%>%<der_ымы%>:%>мЫ2 N_ТӸРВӸ ;
-%<v%>%<prcneg%>%<der_abe%>:%>дЫ2мЫ2 N_ТӸРВӸ ;
+%<v%>%<prcact%>%<der_ышы%>:%>шЫ2 NMN_ТӸРВӸ ;
+%<v%>%<prcpss%>%<der_ымы%>:%>мЫ2 NMN_ТӸРВӸ ;
+%<v%>%<prcneg%>%<der_abe%>:%>дЫ2мЫ2 NMN_ТӸРВӸ ;
 
 LEXICON V_ЕМ
 %<v%>: INDPRSSG1-em ;
@@ -22206,9 +22223,9 @@ LEXICON V_ЕМ
 
 %<v%>: INF ;
 %<v%>%<prcact%>:%>Ы1шЫ2 K  ; !! Contlex needed
-%<v%>%<prcact%>%<der_ышы%>:%>Ы1шЫ2 N_ТӸРВӸ ;
-%<v%>%<prcpss%>%<der_ымы%>:%>Ы1мЫ2 N_ТӸРВӸ ;
-%<v%>%<prcneg%>%<der_abe%>:%>Ы1дЫ2мЫ2 N_ТӸРВӸ ;
+%<v%>%<prcact%>%<der_ышы%>:%>Ы1шЫ2 NMN_ТӸРВӸ ;
+%<v%>%<prcpss%>%<der_ымы%>:%>Ы1мЫ2 NMN_ТӸРВӸ ;
+%<v%>%<prcneg%>%<der_abe%>:%>Ы1дЫ2мЫ2 NMN_ТӸРВӸ ;
 
 !! !!NONPAST 
 

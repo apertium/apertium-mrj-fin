@@ -3,9 +3,26 @@ SOFT-DELIMITERS = "<,>" ;
 
 SETS
 
-LIST N = n ; 
+LIST A = a ;
+LIST ADV = adv ; 
+LIST CC = cc ;
+LIST CONJ = conj ;
+LIST CONNEG = conneg ;
+LIST DER-N = der_n ; 
+LIST PO = po ;
+LIST PCLE = pcle ;
+LIST V = v ;
+LIST V-FIN = des ind imprt imprtii ;
+LIST V-NEG = (v neg aux) ; 
+LIST N = n ;
+LIST PERSON = sg1 sg2 sg3 pl1 pl2 pl3 ;
+LIST TENSE = prs prt1 prt2 ;
 
 SECTION
 
-SELECT N ;
-  ## 
+SELECT (prt2) ;
+
+REMOVE DER-N IF (1 N) ;
+
+SELECT CONNEG IF (-1 V-NEG) ;
+SELECT $$TENSE + $$PERSON IF (1C $$TENSE + $$PERSON) ;
